@@ -45,15 +45,13 @@
       <groupId>ch.ntb</groupId>
       <artifactId>usb</artifactId>
       <version>0.5.9</version>
-      <scope>system</scope>
-      <systemPath>/home/ponu/workspace/led-message-board-connector/lib/ch.ntb.usb-0.5.9.jar</systemPath>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.ullgren</groupId>
       <artifactId>dcmsgboard4j</artifactId>
       <version>0.1.0</version>
-      <scope>system</scope>
-      <systemPath>/home/ponu/workspace/led-message-board-connector/lib/dcmsgboard4j-0.1.0.jar</systemPath>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.mule</groupId>
