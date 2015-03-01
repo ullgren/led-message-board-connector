@@ -38,7 +38,7 @@ You will have to have these two java libraries installed in you runtime (or proj
 
 ## "Device or resource busy" when running in Linux
 
-On Linux if the connector fail to connect to the USB device try to run to display text using [Jeff Jahr's dcled](http://www.last-outpost.com/~malakai/dcled/) program. If that works try to run with this connector again. If it works this time it is because your system has the usbhid kernel module loaded try unloading it.
+On Linux if the connector fail to connect to the USB device with this message try to display som text using [Jeff Jahr's dcled](http://www.last-outpost.com/~malakai/dcled/) program. If that works then try to run with Mule and the connector again. If it works this time it is because your system has the usbhid kernel module loaded so try unloading it.
 
 ```
 sudo rmmod usbhid
