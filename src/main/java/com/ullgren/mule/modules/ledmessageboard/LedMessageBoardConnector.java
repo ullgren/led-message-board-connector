@@ -41,7 +41,7 @@ public class LedMessageBoardConnector
 
 			connectionStrategy.getBoard().update(s);
 			try {
-				Thread.sleep(50);
+				Thread.sleep((this.connectionStrategy.getDelay()/2));
 			} catch (InterruptedException e) {
 				// Do nothing ...
 			}

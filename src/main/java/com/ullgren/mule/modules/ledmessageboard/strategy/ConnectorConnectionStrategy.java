@@ -7,6 +7,7 @@ package com.ullgren.mule.modules.ledmessageboard.strategy;
 
 import org.mule.api.ConnectionException;
 import org.mule.api.ConnectionExceptionCode;
+import org.mule.api.annotations.Configurable;
 import org.mule.api.annotations.Connect;
 import org.mule.api.annotations.ConnectionIdentifier;
 import org.mule.api.annotations.Disconnect;
@@ -14,6 +15,7 @@ import org.mule.api.annotations.TestConnectivity;
 import org.mule.api.annotations.ValidateConnection;
 import org.mule.api.annotations.components.ConnectionManagement;
 import org.mule.api.annotations.param.ConnectionKey;
+import org.mule.api.annotations.param.Default;
 
 import com.ullgren.dcmsgboard4j.Board;
 import com.ullgren.dcmsgboard4j.BoardException;
@@ -24,17 +26,28 @@ import com.ullgren.dcmsgboard4j.UsbBoard;
  *
  * @author Pontus Ullgren
  */
-@ConnectionManagement(configElementName = "config", friendlyName = "Dream Cheeky LED Message Board Configuration")
+@ConnectionManagement(configElementName = "config", friendlyName = "Configuration")
 public class ConnectorConnectionStrategy
 {
 	private Board board;
 	
 	private Integer interfaceNumber;
 	
+	@Configurable
+	@Default("100")
+	private Integer delay;
+	
 	public Board getBoard() {
 		return board;
 	}
 	
+	public Integer getDelay() {
+		return delay;
+	}
+	
+	public void setDelay(Integer delay) {
+		this.delay = delay;
+	}
 	
 	@Connect
     @TestConnectivity
