@@ -49,3 +49,25 @@ For information about usage our documentation at http://github.com/ullgren/led-m
 # Reporting Issues
 
 We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link http://github.com/ullgren/led-message-board-connector/issues.
+
+# Third-Party Code
+
+This project contains certain third-party code (including code which may be made available to you in source code form). Ownership, use, warranty and modification rights with respect to any such designated code is listed below.
+
+## Anypoint DevKit
+
+Copyright (c) 2003-2015 MuleSoft Inc.
+Powered by Mule. MuleSoft is Open for Integration.
+http://www.MuleSoft.com
+License: [CPAL-1.0](http://www.MuleSoft.com/CPAL/)
+
+## Java libusb / libusb-win32 wrapper
+
+Copyright (c) 2005-2006 Andreas Schläpfer
+License: [LGPL 2.1](https://svn.code.sf.net/p/libusbjava/code/trunk/java/LGPL.txt)
+
+## Dream Cheeky USB Message Board for Java library
+
+Copyright (c) 2014-2015 Pontus Ullgren
+License: [LGPL 2.1](https://github.com/ullgren/dcmsgboard4j/blob/master/LICENSE)
+

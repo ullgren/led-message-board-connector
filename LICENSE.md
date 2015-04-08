@@ -251,7 +251,7 @@ notice in Exhibit A and to related Covered Code.
 6. Versions of the License.
 
 6.1 New Versions.
-MuleSoft, Inc. ("MuleSoft") may publish revised and/or new versions of the
+Pontus Ullgren ("Pontus Ullgren") may publish revised and/or new versions of the
 License from time to time. Each version will be given a distinguishing version
 number.
 
@@ -259,13 +259,13 @@ number.
 Once Covered Code has been published under a particular version of the License,
 You may always continue to use it under the terms of that version. You may also
 choose to use such Covered Code under the terms of any subsequent version of the
-License published by MuleSoft. No one other than MuleSoft has the right to
+License published by Pontus Ullgren. No one other than Pontus Ullgren has the right to
 modify the terms applicable to Covered Code created under this License.
 
 6.3 Derivative Works.
 If You create or use a modified version of this License (which you may only do
 in order to apply it to code which is not already Covered Code governed by this
-License), You must (a) rename Your license so that the phrases "MuleSoft",
+License), You must (a) rename Your license so that the phrases "Pontus Ullgren",
 "CPAL" or any confusingly similar phrase do not appear in your license (except
 to note that your license differs from this License) and (b) otherwise make it
 clear that Your version of the license contains terms which differ from the
@@ -450,7 +450,7 @@ EXHIBIT A. Common Public Attribution License Version 1.0.
 "The contents of this file are subject to the Common Public Attribution License
 Version 1.0 (the "License"); you may not use this file except in compliance with
 the License. You may obtain a copy of the License at
-http://www.MuleSoft.com/CPAL/. The License is based on the Mozilla Public
+http://opensource.org/licenses/CPAL-1.0. The License is based on the Mozilla Public
 License Version 1.1 but Sections 14 and 15 have been added to cover use of
 software over a computer network and provide for limited attribution for the
 Original Developer. In addition, Exhibit A has been modified to be consistent
@@ -458,21 +458,19 @@ with Exhibit B.
 Software distributed under the License is distributed on an "AS IS" basis,
 WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
 specific language governing rights and limitations under the License.
-The Original Code is MuleSoft Mule
-The Initial Developer of the Original Code is MuleSoft Inc. All portions of
-the code are Copyright (c) 2003-2009 MuleSoft Inc. All Rights Reserved.
+The Original Code is Pontus Ullgren
+The Initial Developer of the Original Code is pontus Ullgren All portions of
+the code are Copyright (c) 2014-2015 Pontus Ullgren All Rights Reserved.
 
 EXHIBIT B. Attribution Information
 Subject to the limitations and other requirements in Section 14 of the License,
 the Original Developer requires You to display the following Attribution
 Information:
 
-Attribution Copyright Notice: Copyright (c) 2003-2009 MuleSoft Inc.
-Attribution Phrase (not exceeding 10 words): Powered by Mule. MuleSoft is Open
-for Integration.
-Attribution URL: http://www.MuleSoft.com
+Attribution Copyright Notice: Copyright (c) 2014-2015 Pontus Ullgren
+Attribution Phrase (not exceeding 10 words): 
+Attribution URL: http://pontus.ullgren.com
 Graphic Image provided in the Covered Code as file:
-http://www.MuleSoft.com/images/mulesoft-logo.gif
 
 
 Redistributions of the Covered Code in binary form or source code form, must
