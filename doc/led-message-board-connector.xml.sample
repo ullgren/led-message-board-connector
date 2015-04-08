@@ -1,3 +1,9 @@
-<!-- BEGIN_INCLUDE(led-message-board:my-processor) -->
-    <led-message-board:my-processor config-ref="" content="#[map-payload:content]" />
-<!-- END_INCLUDE(led-message-board:my-processor) -->
+<!-- BEGIN_INCLUDE(led-message-board:display-text) -->
+    <led-message-board:display-text config-ref="" content="#[map-payload:content]" delay="#[map-payload:delay]"/>
+<!-- END_INCLUDE(led-message-board:display-text) -->
+<!-- BEGIN_INCLUDE(led-message-board:display-static-text) -->
+    <led-message-board:display-static-text config-ref="" content="#[map-payload:content]" duration="#[map-payload:duration]"/>
+<!-- END_INCLUDE(led-message-board:display-static-text) -->
+<!-- BEGIN_INCLUDE(led-message-board:test-pattern) -->
+    <led-message-board:test-pattern config-ref="" delay="#[map-payload:delay]"/>
+<!-- END_INCLUDE(led-message-board:test-pattern) -->
