@@ -10,21 +10,6 @@ Mule 3.6.x
 
 Developed for and tested with the [Dream Cheeky LED Message Board](http://dreamcheeky.com/led-message-board).
 
-# Build
-
-This connector depends on [dcmsgboard4j](https://github.com/ullgren/dcmsgboard4j) and [libusbjava](http://libusbjava.sourceforge.net/wp/) and since neither is available in any public maven repo you need to install them into your local maven repository.
-
-```
-mvn install:install-file -Dfile=lib/ch.ntb.usb-0.5.9.jar -DgroupId=ch.ntb \
-    -DartifactId=usb -Dversion=0.5.9 -Dpackaging=jar
-mvn install:install-file -Dfile=lib/dcmsgboard4j-0.1.0.jar -DgroupId=com.ullgren \
-    -DartifactId=dcmsgboard4j -Dversion=0.1.0 -Dpackaging=jar
-```
-
-The unit test currently also requires a [Dream Cheeky LED Message Board](http://dreamcheeky.com/led-message-board) to be connected to the system or they will fail.
-
-After this you should be able to build the connector.
-
 # Installation 
 For beta connectors you can download the source code and build it with devkit to find it available on your local repository. Then you can add it to Studio…<TBD>
 
