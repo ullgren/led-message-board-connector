@@ -33,6 +33,11 @@
            <url>http://repository.mulesoft.org/snapshots/</url>
            <layout>default</layout>
        </repository>
+       <repository>
+	   <id>bintray-ullgren-maven</id>
+           <name>bintray</name>
+           <url>http://dl.bintray.com/ullgren/maven</url>
+       </repository>
     </repositories>
     <scm>
         <connection>scm:git:git://github.com:ullgren/led-message-board-connector.git</connection>
@@ -41,14 +46,14 @@
     </scm>
     <dependencies>
     	<dependency>
-			<groupId>ch.ntb</groupId>  
-			<artifactId>usb</artifactId>  
+			<groupId>com.ullgren.pontus.libusbjava</groupId>
+                        <artifactId>usb</artifactId>
 			<version>0.5.9</version> 
-		</dependency>
+	</dependency>
     	<dependency>
 			<groupId>com.ullgren</groupId>  
 			<artifactId>dcmsgboard4j</artifactId>  
-			<version>0.1.0</version> 
+			<version>0.1.1</version> 
 		</dependency>
     </dependencies>
     <build>

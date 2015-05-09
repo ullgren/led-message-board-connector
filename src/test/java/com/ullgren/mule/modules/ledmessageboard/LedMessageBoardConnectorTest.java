@@ -18,6 +18,6 @@ public class LedMessageBoardConnectorTest extends ConnectorTestCase {
 
     @Test
     public void testFlow() throws Exception {
-        runFlowAndExpect("testFlow", "Another string");
+    	runFlowWithPayloadAndExpect("testFlow", "Another string","Another string");
     }
 }

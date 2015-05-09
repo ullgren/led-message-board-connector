@@ -13,6 +13,6 @@
     <led-message-board:config name="config" interfaceNumber="1"/>
 
     <flow name="testFlow">
-        <led-message-board:display-text config-ref="config" content="Another string"/>
+        <led-message-board:display-text config-ref="config" content="#[payload]"/>
     </flow>
 </mule>
