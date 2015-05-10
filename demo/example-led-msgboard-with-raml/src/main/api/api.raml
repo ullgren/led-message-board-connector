@@ -1,0 +1,27 @@
+#%RAML 0.8
+---
+title: Show me a message
+baseUri: http://localhost:8081/
+documentation: 
+  - title: Intro
+    content: This API enables you to show messages on the Dream Cheeky LED Message Board
+
+/message:
+  post:
+     description: Display a scrolling message
+     body:
+      text/plain:
+        example: |
+          Hello World
+/static:
+  post:
+     description: Display a static message
+     body:
+      text/plain:
+        example: |
+          Hello World
+/test:
+  GET:
+     description: Display a test pattern
+     
+        

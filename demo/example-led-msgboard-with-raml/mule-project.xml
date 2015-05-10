@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.6.1" schemaVersion="3.5.0.0">
+    <name>example-led-msgboard-with-raml</name>
+    <description></description>
+    <muleExtension name="APIkit" qualifier="org.mule.tooling.apikit.3.6.0"/>
+    <muleExtension name="Dream Cheeky LED Message Board" qualifier="org.mule.tooling.ui.contribution.led-message-board.3.5.0"/>
+</mule-project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:led-message-board="http://www.mulesoft.org/schema/mule/led-message-board" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.mulesoft.org/schema/mule/led-message-board http://www.mulesoft.org/schema/mule/led-message-board/current/mule-led-message-board.xsd" version="CE-3.6.1">
+    <apikit:config name="api-config" raml="api.raml" consoleEnabled="true" consolePath="console" doc:name="Router" />
+    <led-message-board:config name="Dream_Cheeky_LED_Message_Board__Dream_Cheeky_LED_Message_Board_Configuration" 
+    	interfaceNumber="1" 
+    	doc:name="Dream Cheeky LED Message Board: Dream Cheeky LED Message Board Configuration" 
+    	 />
+    <apikit:mapping-exception-strategy name="api-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+    <flow name="api-main">
+        <http:inbound-endpoint address="http://0.0.0.0:8081/api" doc:name="HTTP" exchange-pattern="request-response" />
+        <apikit:router config-ref="api-config" doc:name="APIkit Router" />
+        <exception-strategy ref="api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" />
+    </flow>
+    <flow name="post:/message:api-config">
+        <object-to-string-transformer doc:name="Object to String"/>
+        <logger level="ERROR" message="#[payload]" doc:name="Logger"/>
+        <led-message-board:display-text config-ref="Dream_Cheeky_LED_Message_Board__Dream_Cheeky_LED_Message_Board_Configuration" content="#[payload]" doc:name="Dream Cheeky LED Message Board" />
+    </flow>
+    <flow name="get:/test:api-config">
+    	<led-message-board:test-pattern config-ref="Dream_Cheeky_LED_Message_Board__Dream_Cheeky_LED_Message_Board_Configuration" doc:name="Dream Cheeky LED Message Board"/>
+        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+    </flow>
+    <flow name="post:/static:api-config">
+    <object-to-string-transformer doc:name="Object to String"/>
+        <logger level="ERROR" message="#[payload]" doc:name="Logger"/>
+        <led-message-board:display-static-text config-ref="Dream_Cheeky_LED_Message_Board__Dream_Cheeky_LED_Message_Board_Configuration" content="#[payload]" doc:name="Dream Cheeky LED Message Board" />
+        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+    </flow>
+</mule>
